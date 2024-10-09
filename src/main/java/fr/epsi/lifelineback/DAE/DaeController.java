@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -15,12 +16,10 @@ public class DaeController {
 
     private final DaeService daeService;
 
-    @PostMapping("/process")
-    public ResponseEntity<String> processJson(@RequestBody String url) throws IOException {
 
-            daeService.processCsvFile(url);
-            return ResponseEntity.ok("JSON file processed successfully.");
-
+    @PostMapping("/dae/near")
+    public List<DaeEntity> findAllNearDae(@RequestBody FindAllNearDaeDTO findAllNearDaeDTO){
+        return daeService.findAllNearDae(findAllNearDaeDTO);
     }
 
 }

@@ -28,8 +28,8 @@ public class DaeEntity {
     @Column(name = "longitude")
     private BigDecimal longitude;
 
-    @Column(name = "addresse_num")
-    private Integer adresseNum;
+    @Column(name = "adresse_num")
+    private String adresseNum;
 
     @Column(name = "adresse_voie")
     private String adresseVoie;
@@ -41,7 +41,7 @@ public class DaeEntity {
     private String adresseCommune;
 
     @Column(name = "acces")
-    private Acces acces;
+    private String acces;
 
     @Column(name = "acces_libre")
     private Boolean accesLibre;
