@@ -18,7 +18,7 @@ public class DaeController {
 
 
     @PostMapping("/dae/near")
-    public List<DaeEntity> findAllNearDae(@RequestBody FindAllNearDaeDTO findAllNearDaeDTO){
+    public List<DaeResponseDto> findAllNearDae(@RequestBody FindAllNearDaeDTO findAllNearDaeDTO){
         return daeService.findAllNearDae(findAllNearDaeDTO);
     }
 

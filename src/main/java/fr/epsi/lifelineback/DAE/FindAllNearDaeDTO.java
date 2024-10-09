@@ -8,8 +8,8 @@ import java.math.BigDecimal;
 public class FindAllNearDaeDTO {
 
     BigDecimal latitude;
-
     BigDecimal longitude;
-
     BigDecimal range;
+    BigDecimal userLatitude;
+    BigDecimal userLongitude;
 }
